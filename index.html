@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 구글 무료 폰트 -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+            rel="stylesheet"
+        />
+        <!-- fontawesome 아이콘 css 사용 -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/082cb36481.css"
+        />
+        <link rel="stylesheet" href="./style.css" />
+
+        <title>Todo List</title>
+    </head>
+    <body>
+        <header>
+            <h1>DJ's Todo List</h1>
+        </header>
+        <form>
+            <!-- todo 에 원하는 text 입력하는 input 구간 -->
+            <input type="text" class="todo-input" />
+            <!-- input 에 입력한 text 를 submit 시키는 버튼 -->
+            <button type="submit" class="todo-button">
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
+            </button>
+
+            <div class="select">
+                <!-- select 를 사용하여 option 에 3가지 값 각각 부여 -->
+                <select name="todos" class="filter-todo">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+        </form>
+
+        <!-- div 하단 ul 단에 입력한 todo list 들이 표시 될 예정 -->
+        <div class="todo-container">
+            <ul class="todo-list"></ul>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
